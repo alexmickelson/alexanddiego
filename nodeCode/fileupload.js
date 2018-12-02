@@ -15,7 +15,7 @@ app.get('/fileupload.html', function (req, res) {
 })
 
 app.post('/file_upload', upload.single("file"), function (req, res) {
-   var file = __dirname + "/img/" + req.file.originalname;
+   var file = __dirname + "/data/" + req.file.originalname;
    fs.readFile( req.file.path, function (err, data) {
         fs.writeFile(file, data, function (err) {
          if( err ){
