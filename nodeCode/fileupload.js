@@ -6,7 +6,7 @@ var bodyParser = require('body-parser');
 var multer = require('multer');
 
 
-app.use(express.static('~/alexanddiego/nodeCode'));
+app.use(express.static(path.join(__dirname, 'nodeCode')));
 app.use(bodyParser.urlencoded({ extended: false }));
 var upload = multer({ dest: '/tmp' })
 
@@ -31,7 +31,7 @@ app.post('/file_upload', upload.single("file"), function (req, res) {
               };
           }
           res.end( JSON.stringify( response ) );
-       });
+       });d
    });
 })
 
