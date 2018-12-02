@@ -6,7 +6,7 @@ var bodyParser = require('body-parser');
 var multer = require('multer');
 
 
-app.use(express.static(path.join(__dirname, 'nodeCode')));
+app.use(express.static(__dirname));
 app.use(bodyParser.urlencoded({ extended: false }));
 var upload = multer({ dest: '/tmp' })
 
