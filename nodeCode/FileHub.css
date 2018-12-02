@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+    
+    
+html, body{
+    font-family: 'Lobster', cursive;
+    height: 100%;
+}
+
+main{
+    height: 100%;
+}
+main div {
+    display: block;
+}
+
+#menu{
+
+    background-color: white;
+    padding: 25px;
+    box-shadow: 0px 5px 10px grey;
+    position: fixed;
+    width: 97.5%;
+    margin-top: -8px;
+    z-index: 4;
+}
+
+.bannerRight{
+    float: right;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+.box{
+    font-size: 18px;
+    border-style: solid;
+    border-width: 1px;
+    border-color:gray;
+    padding: 10px;
+    border-radius: 5px;
+    color: rgb(0, 119, 255);
+    width: 200px;
+    text-align: center;
+    transition-duration: 0.7s;
+    text-decoration: none;
+
+}
+
+.box:hover{
+    color: gray;
+    color: rgb(0, 119, 255);
+}
+
+
+#logo {
+    display: block;
+    margin-top: -40px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 55px;
+    width: 220px;
+}
+.bigImage, .bigImage2, .bigImage3{
+background-image: url(../css/img/office.jpg);
+position: relative;
+height: 100%;
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.caption {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    color: #000;
+    text-align: center;
+}
+
+.caption span.border {
+    background-color: #111;
+    text-align: center;
+    color: #fff;
+    padding: 18px;
+    font-size: 25px;
+    letter-spacing: 5px;
+    opacity: 0.5;
+    font-family: sans-serif;
+    border-radius: 5px;
+}
+
+.caption span.border:hover {
+    background-color: #111;
+    color: #fff;
+    padding: 18px;
+    font-size: 25px;
+    opacity: 1;
+    transition: .75s;
+    font-family: sans-serif;
+}
+
+
+.bigImage2 {
+    background-image: url(../css/img/home.jpg);
+    min-height: 900px;
+}
+
+.bigImage3 {
+    background-image: url(../css/img/ads.jpg);
+    min-height: 900px;
+}
+
+.mainBody{
+    position: relative;
+    top: 80px;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 5px;
+    color: rgb(0, 119, 255);
+    width: 200px;
+    text-align: center;
+    transition-duration: 0.7s;
+    text-decoration: none;
+    display: block;
+    box-shadow: 0px 5px 10px grey;
+    position: fixed;
+    background-image: url(../css/img/ipad.png)
+
+}
+
+.mainBack{
+    background-image: url(../css/img/office.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+input[type="file"], input[type="submit"]{
+   display: none;
+}
+
+.input-file{
+    font-size: 18px;
+    border-style: solid;
+    border-width: 1px;
+    border-color:gray;
+    padding: 10px;
+    border-radius: 5px;
+    width: 89%;
+    height: 20px;
+    text-align: center;
+    transition-duration: 0.7s;
+    display: inline-block;
+}
+
+.input-file:hover{
+    box-shadow: 0px 5px 10px grey;
+    transition: 0.7s;
+    cursor: pointer;
+}
