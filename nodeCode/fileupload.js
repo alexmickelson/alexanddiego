@@ -31,7 +31,7 @@ app.post('/file_upload', upload.single("file"), function (req, res) {
               };
           }
           res.end( JSON.stringify( response ) );
-       });d
+       });
    });
 })
 
