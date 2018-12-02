@@ -20,7 +20,7 @@
     <div class = "mainBody">
             <h3>File Upload:</h3>
             Select a file to upload: <br/><br/>
-            <form action="/file_upload" method="POST" enctype="multipart/form-data">
+            <form action="/file_upload" method="POST" enctype="multipart/form-data" id = "submitForm">
                 <label class="input-file">
                     Choose a File...
                     <input type="file" name="file" size="50" />
@@ -28,13 +28,24 @@
             <br/>
             <label class="input-file">
                 Submit
-                <input type="submit" class = "box" id = "submitButton" value="Upload File" />
+                <input type="submit" class = "box" value="Upload File" />
             </label>
             </form>
     </div>
     <div id = "fileList">
         <script>
+
+            var fs = require( "fs");
             //TODO: Reads img folder and display
+            $(function(){
+                fs.readdir(__dirname + "/data/", function(err, items) {
+                console.log(items);
+    
+                for (var i=0; i<items.length; i++) {
+                console.log(items[i]);
+            }
+            });
+        });
         </script>
     </div>
 </main>
