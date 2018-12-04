@@ -19,6 +19,7 @@ app.get('/aboutUs.html', function (req, res) {
   })
 
 app.post('/file_upload', upload.single("file"), function (req, res) {
+     try{
    var file = __dirname + "/data/" + req.file.originalname;
    fs.readFile( req.file.path, function (err, data) {
         fs.writeFile(file, data, function (err) {
@@ -34,10 +35,14 @@ app.post('/file_upload', upload.single("file"), function (req, res) {
                    filename: req.file.originalname
               };
           }
-          res.sendFile(__dirname + '/fileupload.html');
 
        });
+       res.sendFile(__dirname + '/fileupload.html');
    });
+     }
+     catch(err){
+          res.sendFile(__dirname + '/fileupload.html');
+     }
 })
 /*
 var readFiles = function dirfiles () {

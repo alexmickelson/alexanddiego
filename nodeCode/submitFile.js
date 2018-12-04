@@ -1,6 +1,6 @@
 
 $(document).ready(function(){
-    
+    /*
     function doSubmit(){
         // Form Data
         var formData = new FormData();
@@ -22,7 +22,7 @@ $(document).ready(function(){
 
 
 
-    /*$('#myForm').on('submit', function(e) {
+    $('#myForm').on('submit', function(e) {
         e.preventDefault(); // <-- important
         $(this).ajaxSubmit({
             target: '#output',
