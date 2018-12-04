@@ -126,7 +126,7 @@ background-size: cover;
     display: block;
     box-shadow: 0px 5px 10px grey;
     position: fixed;
-    background-image: url(../css/img/tableFile.jpg)
+    background-image: url(../css/img/tableFile.jpg);
 
 }
 
@@ -154,6 +154,7 @@ input[type="file"], input[type="submit"]{
     text-align: center;
     transition-duration: 0.7s;
     display: inline-block;
+    opacity: 0.7;
 }
 
 .input-file:hover{
@@ -164,10 +165,8 @@ input[type="file"], input[type="submit"]{
 
 .aboutUsImage{
     background-image: url(../css/img/alexanddiego.png);
-    position: relative;
-    padding-top: 20px;
     height: 100%;
-    /*background-attachment: fixed;*/
+    padding-top: 400px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -212,4 +211,16 @@ input[type="file"], input[type="submit"]{
     box-shadow: 0px 5px 10px rgb(107, 107, 107);
     transition: 0.7s;
     cursor: pointer;
+}
+
+p{
+    font-size: 22px;
+    font-weight: 100;
+}
+
+h2{
+    font-size: 36px;
+}
+h3{
+    opacity: 0.7;
 }
