@@ -126,13 +126,13 @@ background-size: cover;
     display: block;
     box-shadow: 0px 5px 10px grey;
     position: fixed;
-    background-image: url(../css/img/ipad.png)
+    background-image: url(../css/img/tableFile.jpg)
 
 }
 
 .mainBack{
-    background-image: url(../css/img/office.jpg);
-    background-attachment: fixed;
+    background-image: url(../css/img/tableTop.png);
+    /*background-attachment: fixed;*/
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -191,4 +191,25 @@ input[type="file"], input[type="submit"]{
 #filePic{
     width: 100px;
     height: 100px;
+}
+
+.download{
+    font-size: 12px;
+    border-style: solid;
+    border-width: 1px;
+    padding: 10px;
+    border-radius: 5px;
+    color: rgb(0, 119, 255);
+    width: 100px;
+    text-align: center;
+    transition-duration: 0.7s;
+    text-decoration: none;
+    opacity: 0.7;
+    /*background: none;*/
+}
+
+.download:hover{
+    box-shadow: 0px 5px 10px rgb(107, 107, 107);
+    transition: 0.7s;
+    cursor: pointer;
 }

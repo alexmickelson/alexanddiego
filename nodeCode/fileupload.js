@@ -34,12 +34,13 @@ app.post('/file_upload', upload.single("file"), function (req, res) {
                    filename: req.file.originalname
               };
           }
-          res.end( JSON.stringify( response ) );
+          res.sendFile(__dirname + '/fileupload.html');
+
        });
    });
 })
-
-var readFiles = function(){
+/*
+var readFiles = function dirfiles () {
      var path = require ("path");
      var fs = require("fs");
      var directoryPath = path.join(__dirname, 'data');
@@ -54,18 +55,35 @@ var readFiles = function(){
          console.log(obj);
      });
      return obj;
- }();
+ }();*/
 
 
 app.get('/file_list', function(req, res){
-     console.log(readFiles);
-     res.end(JSON.stringify( readFiles));
+     var path = require ("path");
+     var fs = require("fs");
+     var directoryPath = path.join(__dirname, 'data');
+     var jsn = '[]';
+     var obj = JSON.parse(jsn);
+     fs.readdir(directoryPath, function(err, files) {
+
+               files.forEach(function (file) {
+                    // Do whatever you want to do with the file
+                    obj.push({name : file});  
+               });
+          console.log(obj);
+          res.end(JSON.stringify( obj));
+     });
+     //console.log(obj);
 });
 
+app.get('/download', function (req, res) {
+     console.log(req.query.name);
+     res.download( __dirname + '/data/' + req.query.name );
+  });
 
 var server = app.listen(8081, function () {
   var host = server.address().address
   var port = server.address().port
 
   console.log("Example app listening at http://%s:%s", host, port)
-})
+});
