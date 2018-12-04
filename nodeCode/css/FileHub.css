@@ -23,6 +23,7 @@ main div {
     width: 97.5%;
     margin-top: -8px;
     z-index: 4;
+    margin-left: -1px;
 }
 
 .bannerRight{
@@ -64,10 +65,20 @@ main div {
 background-image: url(../css/img/office.jpg);
 position: relative;
 height: 100%;
+animation: fadein 2s;
 background-attachment: fixed;
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
 }
 
 .caption {
@@ -105,11 +116,13 @@ background-size: cover;
 .bigImage2 {
     background-image: url(../css/img/home.jpg);
     min-height: 900px;
+    animation: fadein 2s;
 }
 
 .bigImage3 {
     background-image: url(../css/img/ads.jpg);
     min-height: 900px;
+    animation: fadein 2s;
 }
 
 .mainBody{
@@ -165,6 +178,7 @@ input[type="file"], input[type="submit"]{
 
 .aboutUsImage{
     background-image: url(../css/img/alexanddiego.png);
+    animation: fadein 2s;
     height: 100%;
     padding-top: 400px;
     background-position: center;
