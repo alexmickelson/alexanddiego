@@ -14,6 +14,10 @@ app.get('/fileupload.html', function (req, res) {
    res.sendFile( __dirname + "/" + "fileupload.html" );
 })
 
+app.get('/aboutUs.html', function (req, res) {
+     res.sendFile( __dirname + "/" + "aboutUs.html" );
+  })
+
 app.post('/file_upload', upload.single("file"), function (req, res) {
    var file = __dirname + "/data/" + req.file.originalname;
    fs.readFile( req.file.path, function (err, data) {
@@ -34,7 +38,7 @@ app.post('/file_upload', upload.single("file"), function (req, res) {
        });
    });
 })
-
+/*
 var readFiles = function(){
      var path = require ("path");
      var fs = require("fs");
@@ -54,6 +58,7 @@ var readFiles = function(){
 app.get('/file_list', function(req, res){
      res.end(JSON.stringify( readFiles));
 });
+*/
 
 var server = app.listen(8081, function () {
   var host = server.address().address

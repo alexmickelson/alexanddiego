@@ -11,7 +11,7 @@
                 <div id = "menu">
                     <div id = "banner">
 						<a href = "FileHub.html" class = "box">Home</a> <!--directories start from the working directory so this works -->
-                            <a href="#" class = 'bannerRight'>About Us</a>
+                            <a href="aboutUs.html" class = 'bannerRight'>About Us</a>
                             <img src = css/img/logo.jpg id = 'logo'>
                     </div>
                 </div>
@@ -31,22 +31,6 @@
                 <input type="submit" class = "box" value="Upload File" />
             </label>
             </form>
-    </div>
-    <div id = "fileList">
-        <script>
-
-            var fs = require( "fs");
-            //TODO: Reads img folder and display
-            $(function(){
-                fs.readdir(__dirname + "/data/", function(err, items) {
-                console.log(items);
-    
-                for (var i=0; i<items.length; i++) {
-                console.log(items[i]);
-            }
-            });
-        });
-        </script>
     </div>
 </main>
 </body>

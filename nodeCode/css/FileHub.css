@@ -160,3 +160,14 @@ input[type="file"], input[type="submit"]{
     transition: 0.7s;
     cursor: pointer;
 }
+
+.aboutUsImage{
+    background-image: url(../css/img/alexanddiego.png);
+    position: relative;
+    padding-top: 20px;
+    height: 100%;
+    /*background-attachment: fixed;*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
