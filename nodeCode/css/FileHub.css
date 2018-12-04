@@ -118,7 +118,7 @@ background-size: cover;
     font-size: 18px;
     padding: 10px;
     border-radius: 5px;
-    color: rgb(0, 119, 255);
+    color: black;
     width: 200px;
     text-align: center;
     transition-duration: 0.7s;
@@ -185,6 +185,7 @@ input[type="file"], input[type="submit"]{
     text-align: center;
     display: inline-block;
     font-family: 'Roboto', 'bold';
+    color: rgb(0, 119, 255);
 }
 
 #filePic{
