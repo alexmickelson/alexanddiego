@@ -1,4 +1,4 @@
-function dnl () {
+function dnl (fname) {
     //debugger;
-    window.open('/download?name=' + this.all.name)
+    window.open('/download?name=' + fname)
 };
