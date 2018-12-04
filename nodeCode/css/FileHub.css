@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
     
     
 html, body{
@@ -170,4 +171,24 @@ input[type="file"], input[type="submit"]{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.showFiles{
+    position: absolute;
+    display: block;
+    margin-top: 100px;
+    margin-left: 250px;
+}
+.icon{
+    padding: 20px;
+   /* height: 5%;
+    width: 8%;*/
+    text-align: center;
+    display: inline-block;
+    font-family: 'Roboto', 'bold';
+}
+
+#filePic{
+    width: 100px;
+    height: 100px;
 }

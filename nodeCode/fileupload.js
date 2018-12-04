@@ -38,27 +38,30 @@ app.post('/file_upload', upload.single("file"), function (req, res) {
        });
    });
 })
-/*
+
 var readFiles = function(){
      var path = require ("path");
      var fs = require("fs");
      var directoryPath = path.join(__dirname, 'data');
-     var jsn = {};
+     var jsn = '[]';
+     var obj = JSON.parse(jsn);
      fs.readdir(directoryPath, function(err, files) {
+
          files.forEach(function (file) {
              // Do whatever you want to do with the file
-             jsn['name'] = file;
-               console.log(jsn);
+             obj.push({name : file});  
          });
+         console.log(obj);
      });
-     return jsn;
+     return obj;
  }();
 
 
 app.get('/file_list', function(req, res){
+     console.log(readFiles);
      res.end(JSON.stringify( readFiles));
 });
-*/
+
 
 var server = app.listen(8081, function () {
   var host = server.address().address
